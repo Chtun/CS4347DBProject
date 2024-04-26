@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Upload Form</title>
+  </head>
+  <body>
+    <h1>Video Upload Form</h1>
+    <form
+      id="videoUploadForm"
+      enctype="multipart/form-data"
+      action="/path/to/server-side-script"
+      method="POST"
+    >
+      <label for="exerciseSelect">Select Exercise:</label><br />
+      <select id="exerciseSelect" name="exerciseId" required>
+        <option value="pushups">Push-Ups</option>
+        <option value="squats">Squats</option>
+        <option value="plank">Plank</option>
+        <option value="burpees">Burpees</option>
+        <option value="downwardDog">Yoga: Downward Dog</option></select
+      ><br /><br />
+
+      <label for="videoFile">Upload Video:</label><br />
+      <input
+        type="file"
+        id="videoFile"
+        name="videoFile"
+        accept="video/*"
+        required
+      /><br /><br />
+
+      <label for="notes">Notes:</label><br />
+      <textarea
+        id="notes"
+        name="notes"
+        placeholder="Add any notes here..."
+      ></textarea
+      ><br /><br />
+
+      <input type="submit" value="Upload Video" />
+    </form>
+  </body>
+</html>
