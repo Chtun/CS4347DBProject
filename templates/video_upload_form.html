@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Upload Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Upload Form</h1>
+    <form id="videoUploadForm" action="{{ url_for('upload_video') }}" method="POST">
+        <label for="videoUrl">Video URL:</label>
+        <input type="text" id="videoUrl" name="video_url" placeholder="Enter video URL" required /><br /><br />
+
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes" placeholder="Add any notes here..."></textarea><br /><br />
+
+        <input type="submit" value="Upload Video" />
+    </form>
+</body>
+</html>

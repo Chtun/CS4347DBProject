@@ -26,7 +26,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA INFILE '/data/feedback_data.csv'
+LOAD DATA  INFILE '/data/feedback_data.csv'
 INTO TABLE ExerciseFeedback
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
